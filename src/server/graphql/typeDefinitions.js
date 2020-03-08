@@ -1,8 +1,11 @@
 const { gql } = require("apollo-server");
 
 exports.typeDefs = gql`
+  type WeatherToday {
+    currently: Weather
+  }
+
   type Weather {
-    time: String!
     summary: String!
     icon: String!
     temperature: Float!
@@ -11,6 +14,6 @@ exports.typeDefs = gql`
   }
 
   type Query {
-    currentWeather: Weather
+    currentWeather(latitude: Float!, longitude: Float!): WeatherToday
   }
 `;
