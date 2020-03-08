@@ -16,6 +16,7 @@
     "react-scripts": "3.4.0"
   },
   "scripts": {
+    "start": "concurrently \"yarn start:client\" \"yarn start:server\"",
     "start:client": "react-scripts start",
     "start:server": "node src/server/index.js",
     "build": "react-scripts build",
@@ -45,6 +46,7 @@
     "@storybook/addons": "^5.3.14",
     "@storybook/preset-create-react-app": "^2.0.0",
     "@storybook/react": "^5.3.14",
+    "concurrently": "^5.1.0",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.1.2",
