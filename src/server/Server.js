@@ -9,6 +9,7 @@ exports.Server = {
   start: options => {
     const { parsed } = dotenv.config();
 
+    console.log("parsed", parsed);
     if (Object.keys(parsed).some(key => !process.env[key])) {
       throw new Error(
         "Undefined environment variable detected. Check your .env file to know what values to set."
