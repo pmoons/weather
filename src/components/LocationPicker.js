@@ -1,8 +1,16 @@
-import React from 'react'
-import './LocationPicker.scss'
+import React from "react";
+import "./LocationPicker.scss";
 
 export default class LocationPicker extends React.Component {
   render() {
-    return (<p>I iz a location picker</p>)
+    return (
+      <div className="location-picker">
+        <input
+          id="location-picker"
+          placeholder="E.g. Portland, OR"
+          type="search"
+        />
+      </div>
+    );
   }
 }
