@@ -8,6 +8,9 @@ function App() {
       <main>
         <LocationPicker />
       </main>
+      <footer>
+        <a href="https://darksky.net/poweredby/">Powered by Dark Sky</a>
+      </footer>
     </div>
   );
 }
