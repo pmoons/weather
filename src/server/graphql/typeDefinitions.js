@@ -7,19 +7,6 @@ exports.typeDefs = gql`
     sleet
   }
 
-  enum WeatherIcon {
-    clear-day
-    clear-night
-    rain
-    snow
-    sleet
-    wind
-    fog
-    cloudy
-    partly-cloudy-day
-    partly-cloudy-night
-  }
-
   type WeatherToday {
     currently: Weather
   }
@@ -27,7 +14,7 @@ exports.typeDefs = gql`
   type Weather {
     time: Int!
     summary: String!
-    icon: WeatherIcon
+    icon: String!
     precipProbability: Float!
     precipType: PrecipType
     temperature: Float!
