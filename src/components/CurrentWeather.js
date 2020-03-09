@@ -1,7 +1,7 @@
 import React from "react";
 
-const CurrentWeather = ({ loading, temperature }) => {
-  if (loading === undefined) {
+const CurrentWeather = ({ error, loading, temperature }) => {
+  if (loading === undefined || error) {
     return null;
   }
 

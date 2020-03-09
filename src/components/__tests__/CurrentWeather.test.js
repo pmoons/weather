@@ -22,4 +22,10 @@ describe("CurrentWeather", () => {
       expect(CurrentWeather({})).toBeNull();
     });
   });
+
+  describe("when there is a location error", () => {
+    it("does not render", () => {
+      expect(CurrentWeather({ loading: false, error: "Blah Blah" })).toBeNull();
+    });
+  });
 });

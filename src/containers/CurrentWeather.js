@@ -10,7 +10,8 @@ const mapStateToProps = ({ location }) => {
   return {
     latitude: location.latitude,
     longitude: location.longitude,
-    loading: location.loading
+    loading: location.loading,
+    error: location.error
   };
 };
 
@@ -26,7 +27,8 @@ export default compose(
 
       return {
         temperature: currentWeather.temperature,
-        loading: ownProps.loading || data.loading
+        loading: ownProps.loading || data.loading,
+        error: ownProps.error
       };
     }
   })
