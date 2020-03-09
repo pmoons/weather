@@ -32,6 +32,12 @@ Error: ENOENT: no such file or directory, scandir '/Users/user/Workspaces/weathe
 
 try running `npm rebuild node-sass` [Issue](https://github.com/sass/node-sass/issues/1812)
 
+## How To Use
+- Run the dev environment
+- Click the location arrow thingy in the header
+- Accept GPS location tracking
+- See your weather appear (Woo!)
+
 ### Credits
 
 Weather SVG icons provided under Creative Commons Attribution 4.0 IPL via [AMCharts](https://www.amcharts.com/free-animated-svg-weather-icons/)
