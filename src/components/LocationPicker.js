@@ -11,7 +11,7 @@ const LocationPicker = ({ getLocation, error }) => {
         onClick={getLocation}
         icon={faLocationArrow}
       />
-      {error ? <p className="location-picker--error">{error}</p> : null}
+      {error ? <span className="location-picker--error">{error}</span> : null}
     </div>
   );
 };
