@@ -41,7 +41,7 @@ describe("mapDispatchToProps", () => {
     describe("when getLocation fails", () => {
       beforeEach(() => {
         getLocation.mockImplementation((_, errorCallback) => {
-          errorCallback("foo");
+          errorCallback({ message: "foo" });
         });
       });
 

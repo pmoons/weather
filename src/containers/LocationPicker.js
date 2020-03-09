@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import LocationPicker from "../components/LocationPicker";
 import getLocation from "../helpers/getLocation";
 
-const mapStateToProps = () => ({});
+const mapStateToProps = ({ location }) => ({ error: location.error });
 
 export const mapDispatchToProps = dispatch => ({
   getLocation: () => {
@@ -17,7 +17,7 @@ export const mapDispatchToProps = dispatch => ({
       error => {
         dispatch({
           type: "LOCATION_ERROR",
-          error
+          error: error.message
         });
       }
     );

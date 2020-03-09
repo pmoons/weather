@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationArrow } from "@fortawesome/free-solid-svg-icons";
 import "./LocationPicker.scss";
 
-const LocationPicker = ({ getLocation }) => {
+const LocationPicker = ({ getLocation, error }) => {
   return (
     <div className="location-picker">
       <FontAwesomeIcon
@@ -16,6 +16,7 @@ const LocationPicker = ({ getLocation }) => {
         placeholder="E.g. Portland, OR"
         type="search"
       />
+      {error ? <p className="location-picker--error">{error}</p> : null}
     </div>
   );
 };

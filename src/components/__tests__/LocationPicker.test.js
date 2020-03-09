@@ -14,4 +14,11 @@ describe("LocationPicker", () => {
       expect(getLocation).toHaveBeenCalled();
     });
   });
+
+  describe("when an error message is passed in", () => {
+    it("renders the error message", () => {
+      const { getByText } = render(<LocationPicker error={"foo"} />);
+      expect(getByText("foo"));
+    });
+  });
 });
