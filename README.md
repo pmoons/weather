@@ -22,6 +22,10 @@ A weather app for interviewing purposes.
 
 `yarn start`
 
+## Running Storybook Environment
+
+`yarn storybook`
+
 ## Troubleshooting
 
 - If you are receiving this error:
