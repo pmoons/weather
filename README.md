@@ -12,17 +12,26 @@ A weather app for interviewing purposes.
 4. `cd weather/`
 5. `yarn install`
 6. Create a `.env` file with the following text:
-  - ```
-    DARK_SKY_API_KEY=[GET VALUE FROM ME]
-    ```
-  - Contact maintainer of repo to get API key, or sign up for a key yourself at [Dark Sky](https://darksky.net/dev/register)
+
+- ```
+  DARK_SKY_API_KEY=[GET VALUE FROM ME]
+  ```
+- Contact maintainer of repo to get API key, or sign up for a key yourself at [Dark Sky](https://darksky.net/dev/register)
 
 ## Running Development Environment
+
 `yarn start`
 
 ## Troubleshooting
+
 - If you are receiving this error:
+
 ```
 Error: ENOENT: no such file or directory, scandir '/Users/user/Workspaces/weather/node_modules/node-sass/vendor'
 ```
+
 try running `npm rebuild node-sass` [Issue](https://github.com/sass/node-sass/issues/1812)
+
+### Credits
+
+Weather SVG icons provided under Creative Commons Attribution 4.0 IPL via [AMCharts](https://www.amcharts.com/free-animated-svg-weather-icons/)

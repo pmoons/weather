@@ -26,7 +26,7 @@ export default compose(
       const currentWeather = _.get(data, "currentWeather.currently", {});
 
       return {
-        temperature: currentWeather.temperature,
+        ...currentWeather,
         loading: ownProps.loading || data.loading,
         error: ownProps.error
       };
