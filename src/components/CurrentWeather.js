@@ -34,7 +34,7 @@ const CurrentWeather = ({
   icon,
   precipProbability,
   precipType,
-  temparature,
+  temperature,
   dewPoint,
   humidity,
   uvIndex,
@@ -54,7 +54,7 @@ const CurrentWeather = ({
         <span>{moment(time * 1000).format("MMM Do")}</span>
         <img alt="weather icon" src={getIconUrl(icon)} />
         <span>{summary}</span>
-        <span>{temparature}</span>
+        <span>{temperature}°F</span>
       </div>
       <div className="current-weather__details">
         <span>

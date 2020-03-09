@@ -7,7 +7,7 @@ describe("CurrentWeather", () => {
     const { getByText } = render(
       <CurrentWeather loading={false} temperature={5} />
     );
-    expect(getByText("temperature: 5", { exact: false }));
+    expect(getByText("5", { exact: false }));
   });
 
   describe("when the component is loading", () => {
