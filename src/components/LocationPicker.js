@@ -11,11 +11,6 @@ const LocationPicker = ({ getLocation, error }) => {
         onClick={getLocation}
         icon={faLocationArrow}
       />
-      <input
-        id="location-picker"
-        placeholder="E.g. Portland, OR"
-        type="search"
-      />
       {error ? <p className="location-picker--error">{error}</p> : null}
     </div>
   );
