@@ -1,0 +1,23 @@
+.current-weather {
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem 0.5rem;
+
+  &__summary,
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__summary {
+    align-items: center;
+    flex: 1.2;
+  }
+
+  &__details {
+    align-items: flex-start;
+    flex: 1;
+  }
+}

@@ -1,0 +1,12 @@
+.location-picker {
+  svg {
+    color: #999;
+    cursor: pointer;
+    margin-right: 0.5rem;
+
+    &:hover {
+      color: #004dff;
+      transition: color 0.4s ease;
+    }
+  }
+}

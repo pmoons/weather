@@ -1,4 +1,7 @@
 import React from "react";
+import moment from "moment";
+
+import "./CurrentWeather.scss";
 
 const getIconUrl = icon => {
   switch (icon) {
@@ -23,7 +26,20 @@ const getIconUrl = icon => {
       return "img/weather_sunset.svg";
   }
 };
-const CurrentWeather = ({ error, loading, temperature, icon }) => {
+const CurrentWeather = ({
+  error,
+  loading,
+  time,
+  summary,
+  icon,
+  precipProbability,
+  precipType,
+  temparature,
+  dewPoint,
+  humidity,
+  uvIndex,
+  cloudCover
+}) => {
   if (loading === undefined || error) {
     return null;
   }
@@ -32,10 +48,23 @@ const CurrentWeather = ({ error, loading, temperature, icon }) => {
     return <p>Loading...</p>;
   }
 
-  const iconUrl = getIconUrl(icon);
   return (
     <div className="current-weather">
-      <img alt="weather icon" src={iconUrl} />
+      <div className="current-weather__summary">
+        <span>{moment(time * 1000).format("MMM Do")}</span>
+        <img alt="weather icon" src={getIconUrl(icon)} />
+        <span>{summary}</span>
+        <span>{temparature}</span>
+      </div>
+      <div className="current-weather__details">
+        <span>
+          {precipProbability * 100}% chance of {precipType}
+        </span>
+        <span>Dew Point: {dewPoint}%</span>
+        <span>Humidity: {humidity * 100}%</span>
+        <span>UV Index: {uvIndex}</span>
+        <span>Cloud Cover: {cloudCover * 100}%</span>
+      </div>
     </div>
   );
 };
